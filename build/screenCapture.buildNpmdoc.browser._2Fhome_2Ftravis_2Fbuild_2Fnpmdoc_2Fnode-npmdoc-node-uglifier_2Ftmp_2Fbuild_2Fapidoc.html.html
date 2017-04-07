@@ -1,0 +1,462 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/zsoltszabo/node-uglifier">node-uglifier (v0.5.41)</a>
+</h1>
+<h4>Fully auto merging and uglifying a whole NodeJs project into one file with external files option. Thieves lose the module name and structure information, code runs faster. Makes deployement super easy!
+Also now you can separate your dependencies!</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-uglifier">module node-uglifier</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-uglifier.</span>ipaddr</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-uglifier.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-uglifier.ipaddr">module node-uglifier.ipaddr</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-uglifier.ipaddr.IPv4">
+            function <span class="apidocSignatureSpan">node-uglifier.ipaddr.</span>IPv4
+            <span class="apidocSignatureSpan">(octets)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-uglifier.ipaddr.IPv6">
+            function <span class="apidocSignatureSpan">node-uglifier.ipaddr.</span>IPv6
+            <span class="apidocSignatureSpan">(parts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-uglifier.ipaddr.fromByteArray">
+            function <span class="apidocSignatureSpan">node-uglifier.ipaddr.</span>fromByteArray
+            <span class="apidocSignatureSpan">(bytes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-uglifier.ipaddr.isValid">
+            function <span class="apidocSignatureSpan">node-uglifier.ipaddr.</span>isValid
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-uglifier.ipaddr.parse">
+            function <span class="apidocSignatureSpan">node-uglifier.ipaddr.</span>parse
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-uglifier.ipaddr.parseCIDR">
+            function <span class="apidocSignatureSpan">node-uglifier.ipaddr.</span>parseCIDR
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-uglifier.ipaddr.process">
+            function <span class="apidocSignatureSpan">node-uglifier.ipaddr.</span>process
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-uglifier.ipaddr.subnetMatch">
+            function <span class="apidocSignatureSpan">node-uglifier.ipaddr.</span>subnetMatch
+            <span class="apidocSignatureSpan">(address, rangeList, defaultName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-uglifier" id="apidoc.module.node-uglifier">module node-uglifier</a></h1>
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-uglifier.ipaddr" id="apidoc.module.node-uglifier.ipaddr">module node-uglifier.ipaddr</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-uglifier.ipaddr.IPv4" id="apidoc.element.node-uglifier.ipaddr.IPv4">
+        function <span class="apidocSignatureSpan">node-uglifier.ipaddr.</span>IPv4
+        <span class="apidocSignatureSpan">(octets)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function IPv4(octets) {
+  var j, len, octet;
+  if (octets.length !== 4) {
+    throw new Error("ipaddr: ipv4 octet count should be 4");
+  }
+  for (j = 0, len = octets.length; j &lt; len; j++) {
+    octet = octets[j];
+    if (!((0 &lt;= octet &amp;&amp; octet &lt;= 255))) {
+      throw new Error("ipaddr: ipv4 octet should fit in 8 bits");
+    }
+  }
+  this.octets = octets;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  IPv6.prototype.toIPv4Address = function() {
+    var high, low, ref;
+    if (!this.isIPv4MappedAddress()) {
+      throw new Error("ipaddr: trying to convert a generic ipv6 address to ipv4");
+    }
+    ref = this.parts.slice(-2), high = ref[0], low = ref[1];
+    return new ipaddr.<span class="apidocCodeKeywordSpan">IPv4</span>([high &gt;&gt; 8, high &amp; 0xff, low &gt;&gt; 8
+, low &amp; 0xff]);
+  };
+
+  return IPv6;
+
+})();
+
+ipv6Part = "(?:[0-9a-f]+::?)+";
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-uglifier.ipaddr.IPv6" id="apidoc.element.node-uglifier.ipaddr.IPv6">
+        function <span class="apidocSignatureSpan">node-uglifier.ipaddr.</span>IPv6
+        <span class="apidocSignatureSpan">(parts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function IPv6(parts) {
+  var i, j, k, len, part, ref;
+  if (parts.length === 16) {
+    this.parts = [];
+    for (i = j = 0; j &lt;= 14; i = j += 2) {
+      this.parts.push((parts[i] &lt;&lt; 8) | parts[i + 1]);
+    }
+  } else if (parts.length === 8) {
+    this.parts = parts;
+  } else {
+    throw new Error("ipaddr: ipv6 part count should be 8 or 16");
+  }
+  ref = this.parts;
+  for (k = 0, len = ref.length; k &lt; len; k++) {
+    part = ref[k];
+    if (!((0 &lt;= part &amp;&amp; part &lt;= 0xffff))) {
+      throw new Error("ipaddr: ipv6 part should fit in 16 bits");
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+ipaddr.fromByteArray = function(bytes) {
+  var length;
+  length = bytes.length;
+  if (length === 4) {
+    return new ipaddr.IPv4(bytes);
+  } else if (length === 16) {
+    return new ipaddr.<span class="apidocCodeKeywordSpan">IPv6</span>(bytes);
+  } else {
+    throw new Error("ipaddr: the binary input is neither an IPv6 nor IPv4 address");
+  }
+};
+
+ipaddr.process = function(string) {
+  var addr;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-uglifier.ipaddr.fromByteArray" id="apidoc.element.node-uglifier.ipaddr.fromByteArray">
+        function <span class="apidocSignatureSpan">node-uglifier.ipaddr.</span>fromByteArray
+        <span class="apidocSignatureSpan">(bytes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromByteArray = function (bytes) {
+  var length;
+  length = bytes.length;
+  if (length === 4) {
+    return new ipaddr.IPv4(bytes);
+  } else if (length === 16) {
+    return new ipaddr.IPv6(bytes);
+  } else {
+    throw new Error("ipaddr: the binary input is neither an IPv6 nor IPv4 address");
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-uglifier.ipaddr.isValid" id="apidoc.element.node-uglifier.ipaddr.isValid">
+        function <span class="apidocSignatureSpan">node-uglifier.ipaddr.</span>isValid
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValid = function (string) {
+  return ipaddr.IPv6.isValid(string) || ipaddr.IPv4.isValid(string);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  } catch (error) {
+    e = error;
+    return false;
+  }
+};
+
+ipaddr.IPv4.isValidFourPartDecimal = function(string) {
+  if (ipaddr.IPv4.<span class="apidocCodeKeywordSpan">isValid</span>(string) &amp;&amp; string.match(/^\d+(\.\d+){3}$/)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+ipaddr.IPv6.isValid = function(string) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-uglifier.ipaddr.parse" id="apidoc.element.node-uglifier.ipaddr.parse">
+        function <span class="apidocSignatureSpan">node-uglifier.ipaddr.</span>parse
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (string) {
+  if (ipaddr.IPv6.isValid(string)) {
+    return ipaddr.IPv6.parse(string);
+  } else if (ipaddr.IPv4.isValid(string)) {
+    return ipaddr.IPv4.parse(string);
+  } else {
+    throw new Error("ipaddr: the address has neither IPv6 nor IPv4 format");
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+IPv4.prototype.range = function() {
+  return ipaddr.subnetMatch(this, this.SpecialRanges);
+};
+
+IPv4.prototype.toIPv4MappedAddress = function() {
+  return ipaddr.IPv6.<span class="apidocCodeKeywordSpan">parse</span>("::ffff:" + (this.toString()));
+};
+
+IPv4.prototype.prefixLengthFromSubnetMask = function() {
+  var cidr, i, j, octet, stop, zeros, zerotable;
+  zerotable = {
+    0: 8,
+    128: 7,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-uglifier.ipaddr.parseCIDR" id="apidoc.element.node-uglifier.ipaddr.parseCIDR">
+        function <span class="apidocSignatureSpan">node-uglifier.ipaddr.</span>parseCIDR
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseCIDR = function (string) {
+  var e, error, error1;
+  try {
+    return ipaddr.IPv6.parseCIDR(string);
+  } catch (error) {
+    e = error;
+    try {
+      return ipaddr.IPv4.parseCIDR(string);
+    } catch (error1) {
+      e = error1;
+      throw new Error("ipaddr: the address has neither IPv6 nor IPv4 CIDR format");
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    throw new Error("ipaddr: the address has neither IPv6 nor IPv4 format");
+  }
+};
+
+ipaddr.parseCIDR = function(string) {
+  var e, error, error1;
+  try {
+    return ipaddr.IPv6.<span class="apidocCodeKeywordSpan">parseCIDR</span>(string);
+  } catch (error) {
+    e = error;
+    try {
+      return ipaddr.IPv4.parseCIDR(string);
+    } catch (error1) {
+      e = error1;
+      throw new Error("ipaddr: the address has neither IPv6 nor IPv4 CIDR format");
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-uglifier.ipaddr.process" id="apidoc.element.node-uglifier.ipaddr.process">
+        function <span class="apidocSignatureSpan">node-uglifier.ipaddr.</span>process
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">process = function (string) {
+  var addr;
+  addr = this.parse(string);
+  if (addr.kind() === 'ipv6' &amp;&amp; addr.isIPv4MappedAddress()) {
+    return addr.toIPv4Address();
+  } else {
+    return addr;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-uglifier.ipaddr.subnetMatch" id="apidoc.element.node-uglifier.ipaddr.subnetMatch">
+        function <span class="apidocSignatureSpan">node-uglifier.ipaddr.</span>subnetMatch
+        <span class="apidocSignatureSpan">(address, rangeList, defaultName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subnetMatch = function (address, rangeList, defaultName) {
+  var j, len, rangeName, rangeSubnets, subnet;
+  if (defaultName == null) {
+    defaultName = 'unicast';
+  }
+  for (rangeName in rangeList) {
+    rangeSubnets = rangeList[rangeName];
+    if (rangeSubnets[0] &amp;&amp; !(rangeSubnets[0] instanceof Array)) {
+      rangeSubnets = [rangeSubnets];
+    }
+    for (j = 0, len = rangeSubnets.length; j &lt; len; j++) {
+      subnet = rangeSubnets[j];
+      if (address.match.apply(address, subnet)) {
+        return rangeName;
+      }
+    }
+  }
+  return defaultName;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  loopback: [[new IPv4([127, 0, 0, 0]), 8]],
+  carrierGradeNat: [[new IPv4([100, 64, 0, 0]), 10]],
+  "private": [[new IPv4([10, 0, 0, 0]), 8], [new IPv4([172, 16, 0, 0]), 12], [new IPv4([192, 168, 0, 0]), 16]],
+  reserved: [[new IPv4([192, 0, 0, 0]), 24], [new IPv4([192, 0, 2, 0]), 24], [new IPv4([192, 88, 99, 0]), 24], [new IPv4([198, 51
+, 100, 0]), 24], [new IPv4([203, 0, 113, 0]), 24], [new IPv4([240, 0, 0, 0]), 4]]
+};
+
+IPv4.prototype.range = function() {
+  return ipaddr.<span class="apidocCodeKeywordSpan">subnetMatch</span>(this, this.SpecialRanges);
+};
+
+IPv4.prototype.toIPv4MappedAddress = function() {
+  return ipaddr.IPv6.parse("::ffff:" + (this.toString()));
+};
+
+IPv4.prototype.prefixLengthFromSubnetMask = function() {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
