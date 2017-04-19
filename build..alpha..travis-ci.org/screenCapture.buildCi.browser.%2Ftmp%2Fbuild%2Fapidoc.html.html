@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,18 +47,11 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/zsoltszabo/node-uglifier"
-
-    >node-uglifier (v0.5.41)</a>
+    <a href="https://github.com/zsoltszabo/node-uglifier">node-uglifier (v0.5.41)</a>
 </h1>
 <h4>Fully auto merging and uglifying a whole NodeJs project into one file with external files option. Thieves lose the module name and structure information, code runs faster. Makes deployement super easy!
 Also now you can separate your dependencies!</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.node-uglifier">module node-uglifier</a><ol>
 
@@ -542,27 +535,27 @@ Also now you can separate your dependencies!</h4>
   this.options = {
     mergeFileFilterWithExport: [],
     mergeFileFilter: [],
-    newFilteredFileDir: &#x22;./lib_external&#x22;,
-    containerName: &#x22;cachedModules&#x22;,
+    newFilteredFileDir: "./lib_external",
+    containerName: "cachedModules",
     rngSeed: null,
     licenseFile: null,
-    fileExtensions: [&#x22;js&#x22;, &#x22;coffee&#x22;, &#x22;json&#x22;],
+    fileExtensions: ["js", "coffee", "json"],
     suppressFilteredDependentError: false,
     packNodeModules: false
   };
   _.extend(this.options, options);
   this.mainFileAbs = path.resolve(mainFile) || path.resolve(process.cwd(), mainFile);
   if (!fs.existsSync(this.mainFileAbs)) {
-    throw new Error(&#x22;main file not found &#x22; + this.mainFileAbs);
+    throw new Error("main file not found " + this.mainFileAbs);
   } else {
-    console.log(&#x22;processing main file: &#x22; + this.mainFileAbs);
+    console.log("processing main file: " + this.mainFileAbs);
   }
   this.salt = cryptoUtils.generateSalt(saltLength);
-  this.hashAlgorithm = &#x22;sha1&#x22;;
+  this.hashAlgorithm = "sha1";
   this.wrappedSourceContainerName = this.options.containerName;
   this.serialMappings = cryptoUtils.shuffleArray((function() {
     results = [];
-    for (j = 0; j &#x3c;= 10000; j++){ results.push(j); }
+    for (j = 0; j &lt;= 10000; j++){ results.push(j); }
     return results;
   }).apply(this), this.options.rngSeed);
   this._sourceCodes = {};
@@ -593,27 +586,27 @@ Also now you can separate your dependencies!</h4>
   this.options = {
     mergeFileFilterWithExport: [],
     mergeFileFilter: [],
-    newFilteredFileDir: &#x22;./lib_external&#x22;,
-    containerName: &#x22;cachedModules&#x22;,
+    newFilteredFileDir: "./lib_external",
+    containerName: "cachedModules",
     rngSeed: null,
     licenseFile: null,
-    fileExtensions: [&#x22;js&#x22;, &#x22;coffee&#x22;, &#x22;json&#x22;],
+    fileExtensions: ["js", "coffee", "json"],
     suppressFilteredDependentError: false,
     packNodeModules: false
   };
   _.extend(this.options, options);
   this.mainFileAbs = path.resolve(mainFile) || path.resolve(process.cwd(), mainFile);
   if (!fs.existsSync(this.mainFileAbs)) {
-    throw new Error(&#x22;main file not found &#x22; + this.mainFileAbs);
+    throw new Error("main file not found " + this.mainFileAbs);
   } else {
-    console.log(&#x22;processing main file: &#x22; + this.mainFileAbs);
+    console.log("processing main file: " + this.mainFileAbs);
   }
   this.salt = cryptoUtils.generateSalt(saltLength);
-  this.hashAlgorithm = &#x22;sha1&#x22;;
+  this.hashAlgorithm = "sha1";
   this.wrappedSourceContainerName = this.options.containerName;
   this.serialMappings = cryptoUtils.shuffleArray((function() {
     results = [];
-    for (j = 0; j &#x3c;= 10000; j++){ results.push(j); }
+    for (j = 0; j &lt;= 10000; j++){ results.push(j); }
     return results;
   }).apply(this), this.options.rngSeed);
   this._sourceCodes = {};
@@ -654,9 +647,9 @@ Also now you can separate your dependencies!</h4>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function CyclicDependencies(cyclesArrOfArr) {
   var msg;
-  this.name = &#x27;CyclicDependencies&#x27;;
+  this.name = 'CyclicDependencies';
   this.cycles = cyclesArrOfArr;
-  msg = &#x22;There has been &#x22; + cyclesArrOfArr.length + &#x22; cycles in the dependency tree: \n&#x22; + util.inspect(cyclesArrOfArr, {
+  msg = "There has been " + cyclesArrOfArr.length + " cycles in the dependency tree: \n" + util.inspect(cyclesArrOfArr, {
     showHidden: true,
     depth: null
   });
@@ -690,27 +683,27 @@ Also now you can separate your dependencies!</h4>
   this.options = {
     mergeFileFilterWithExport: [],
     mergeFileFilter: [],
-    newFilteredFileDir: &#x22;./lib_external&#x22;,
-    containerName: &#x22;cachedModules&#x22;,
+    newFilteredFileDir: "./lib_external",
+    containerName: "cachedModules",
     rngSeed: null,
     licenseFile: null,
-    fileExtensions: [&#x22;js&#x22;, &#x22;coffee&#x22;, &#x22;json&#x22;],
+    fileExtensions: ["js", "coffee", "json"],
     suppressFilteredDependentError: false,
     packNodeModules: false
   };
   _.extend(this.options, options);
   this.mainFileAbs = path.resolve(mainFile) || path.resolve(process.cwd(), mainFile);
   if (!fs.existsSync(this.mainFileAbs)) {
-    throw new Error(&#x22;main file not found &#x22; + this.mainFileAbs);
+    throw new Error("main file not found " + this.mainFileAbs);
   } else {
-    console.log(&#x22;processing main file: &#x22; + this.mainFileAbs);
+    console.log("processing main file: " + this.mainFileAbs);
   }
   this.salt = cryptoUtils.generateSalt(saltLength);
-  this.hashAlgorithm = &#x22;sha1&#x22;;
+  this.hashAlgorithm = "sha1";
   this.wrappedSourceContainerName = this.options.containerName;
   this.serialMappings = cryptoUtils.shuffleArray((function() {
     results = [];
-    for (j = 0; j &#x3c;= 10000; j++){ results.push(j); }
+    for (j = 0; j &lt;= 10000; j++){ results.push(j); }
     return results;
   }).apply(this), this.options.rngSeed);
   this._sourceCodes = {};
@@ -740,19 +733,19 @@ Also now you can separate your dependencies!</h4>
     <li>description and source-code<pre class="apidocCodePre">addWrapper = function (source, serial) {
   var firstLine, lastLine, modulesArrayStr, secondLine;
   modulesArrayStr = this.getSourceContainer(serial);
-  firstLine = modulesArrayStr + &#x22;={exports:{}};&#x22; + &#x22;\n&#x22;;
-  secondLine = &#x22;(function(module,exports) {&#x22;;
-  lastLine = &#x22;}).call(this,&#x22; + modulesArrayStr + &#x22;,&#x22; + modulesArrayStr + &#x22;.exports);&#x22;;
-  return &#x22;\n&#x22; + firstLine + secondLine + source + lastLine;
+  firstLine = modulesArrayStr + "={exports:{}};" + "\n";
+  secondLine = "(function(module,exports) {";
+  lastLine = "}).call(this," + modulesArrayStr + "," + modulesArrayStr + ".exports);";
+  return "\n" + firstLine + secondLine + source + lastLine;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
     }
     if (!isReplaced) {
-      throw new Error(requireStatement.text + &#x22; was not replaced with &#x22; + _this.getRequireSubstitution(otherSerial));
+      throw new Error(requireStatement.text + " was not replaced with " + _this.getRequireSubstitution(otherSerial));
     }
   }
   _this._sourceCodes[pathSaltedHash].sourceMod = sourceMod;
-  if (serial &#x3e; 0) {
+  if (serial &gt; 0) {
     _this._sourceCodes[pathSaltedHash].sourceModWrapped = _this.<span class="apidocCodeKeywordSpan">addWrapper</span>(sourceMod,
 serial);
   } else {
@@ -786,16 +779,16 @@ to, toFromMap;
     this.merge();
   }
   if (!this.lastResult.pathOrder) {
-    throw new Error(&#x22;there was no dependencies to export&#x22;);
+    throw new Error("there was no dependencies to export");
     return;
   }
   exportDirAbs = path.resolve(exportDir) || path.resolve(process.cwd(), exportDir);
   projectDir = process.cwd();
   ref = this.lastResult.pathOrder;
-  for (j = 0, len = ref.length; j &#x3c; len; j++) {
+  for (j = 0, len = ref.length; j &lt; len; j++) {
     p = ref[j];
     if (p.indexOf(projectDir) !== 0) {
-      throw new Error(p + &#x22; dependency not found each dependency should be in the project Dir: &#x22; + projectDir);
+      throw new Error(p + " dependency not found each dependency should be in the project Dir: " + projectDir);
     }
     baseDir = path.dirname(p.slice(projectDir.length + 1));
     baseName = path.basename(p);
@@ -814,7 +807,7 @@ to, toFromMap;
           if (otherBaseDir === baseDir) {
             continue;
           }
-          otherFile = path.join(path.resolve(process.cwd(), otherBaseDir), baseNameNoExtension + &#x22;.&#x22; + mirrorExt);
+          otherFile = path.join(path.resolve(process.cwd(), otherBaseDir), baseNameNoExtension + "." + mirrorExt);
           baseNameOther = path.basename(otherFile);
           if (fsExtra.existsSync(otherFile)) {
             newFileOther = path.resolve(path.join(exportDirAbs, otherBaseDir, baseNameOther));
@@ -829,22 +822,22 @@ to, toFromMap;
     }
   }
   results = [];
-  for (k = 0, len1 = sourceFileDidNotExistArr.length; k &#x3c; len1; k++) {
+  for (k = 0, len1 = sourceFileDidNotExistArr.length; k &lt; len1; k++) {
     sourceFileDidNotExist = sourceFileDidNotExistArr[k];
-    results.push(console.log(&#x22;WARNING source file did not exist: &#x22; + sourceFileDidNotExist));
+    results.push(console.log("WARNING source file did not exist: " + sourceFileDidNotExist));
   }
   return results;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var mainFile=&#x22;lib_compiled/test/testproject/main.js&#x22;;
+var mainFile="lib_compiled/test/testproject/main.js";
 var  nodeUglifier=new NodeUglifier(mainFile)
 
 //The second parameter to exportDependencies is optional, handy if you have coffee source files too.
-//It copies the counterpart file too with the arbitrary &#x22;coffee&#x22; extension of every project
-//dependency file that is found in the arbitrary &#x22;lib_compiled&#x22; folder.
+//It copies the counterpart file too with the arbitrary "coffee" extension of every project
+//dependency file that is found in the arbitrary "lib_compiled" folder.
 //If a counterpart file is not found, it is written out to console with WARNING.
-nodeUglifier.<span class="apidocCodeKeywordSpan">exportDependencies</span>(exportDir,{&#x22;coffee&#x22;:{&#x22;src&#x22;:&#x22;
-lib_compiled&#x22;}})
+nodeUglifier.<span class="apidocCodeKeywordSpan">exportDependencies</span>(exportDir,{"coffee":{"src":"
+lib_compiled"}})
 ```
 
 So the above example created the lib_test_project_export/src and lib_test_project_export/lib_compiled folders with the minimal set
@@ -866,8 +859,8 @@ the test_project
   var _this, dir, outFileAbs, sourceMapModulesOutFileName, sourceMapOutFileName;
   _this = this;
   outFileAbs = path.resolve(file);
-  sourceMapOutFileName = path.basename(outFileAbs) + &#x22;.map&#x22;;
-  sourceMapModulesOutFileName = path.basename(outFileAbs) + &#x22;.modules-map&#x22;;
+  sourceMapOutFileName = path.basename(outFileAbs) + ".map";
+  sourceMapModulesOutFileName = path.basename(outFileAbs) + ".modules-map";
   dir = path.dirname(outFileAbs);
   fsExtra.ensureDirSync(dir);
   if (this.lastResult.sourceMapUglify != null) {
@@ -878,14 +871,14 @@ the test_project
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 ```javascript
-var NodeUglifier = require(&#x22;node-uglifier&#x22;);
-var nodeUglifier = new NodeUglifier(&#x22;lib_compiled/test/testproject/main.js&#x22;);
+var NodeUglifier = require("node-uglifier");
+var nodeUglifier = new NodeUglifier("lib_compiled/test/testproject/main.js");
 nodeUglifier.merge().uglify();
 
 //exporting
-nodeUglifier.exportToFile(&#x22;lib_compiled/test/resultFiles/simpleMergeAndUglify.js&#x22;);
-nodeUglifier.<span class="apidocCodeKeywordSpan">exportSourceMaps</span>(&#x22;lib_compiled/test/resultFiles/sourcemaps/simpleMergeAndUglify
-.js&#x22;);
+nodeUglifier.exportToFile("lib_compiled/test/resultFiles/simpleMergeAndUglify.js");
+nodeUglifier.<span class="apidocCodeKeywordSpan">exportSourceMaps</span>("lib_compiled/test/resultFiles/sourcemaps/simpleMergeAndUglify
+.js");
 //DONE
 
 //in case you need it get the string
@@ -929,14 +922,14 @@ var uglifiedString=nodeUglifier.toString();
     <li>example usage<pre class="apidocCodePre">...
 ### merge and uglify
 ```javascript
-var NodeUglifier = require(&#x22;node-uglifier&#x22;);
-var nodeUglifier = new NodeUglifier(&#x22;lib_compiled/test/testproject/main.js&#x22;);
+var NodeUglifier = require("node-uglifier");
+var nodeUglifier = new NodeUglifier("lib_compiled/test/testproject/main.js");
 nodeUglifier.merge().uglify();
 
 //exporting
-nodeUglifier.<span class="apidocCodeKeywordSpan">exportToFile</span>(&#x22;lib_compiled/test/resultFiles/simpleMergeAndUglify.js
-&#x22;);
-nodeUglifier.exportSourceMaps(&#x22;lib_compiled/test/resultFiles/sourcemaps/simpleMergeAndUglify.js&#x22;);
+nodeUglifier.<span class="apidocCodeKeywordSpan">exportToFile</span>("lib_compiled/test/resultFiles/simpleMergeAndUglify.js
+");
+nodeUglifier.exportSourceMaps("lib_compiled/test/resultFiles/sourcemaps/simpleMergeAndUglify.js");
 //DONE
 
 //in case you need it get the string
@@ -990,8 +983,8 @@ var uglifiedString=nodeUglifier.toString();
     <li>description and source-code<pre class="apidocCodePre">getRequireSubstitutionForFilteredWithExport = function (pathAbs, relPathFn) {
   var relFile, relFileNoExt;
   relFile = relPathFn(pathAbs);
-  relFileNoExt = relFile.replace(path.extname(relFile), &#x22;&#x22;);
-  return &#x22;require(&#x27;./&#x22; + relFileNoExt.replace(/\\/g, &#x22;/&#x22;) + &#x22;&#x27;)&#x22;;
+  relFileNoExt = relFile.replace(path.extname(relFile), "");
+  return "require('./" + relFileNoExt.replace(/\\/g, "/") + "')";
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1006,7 +999,7 @@ var uglifiedString=nodeUglifier.toString();
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getRequireSubstitutionForMerge = function (serial) {
-  return this.getSourceContainer(serial) + &#x22;.exports&#x22;;
+  return this.getSourceContainer(serial) + ".exports";
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1021,24 +1014,24 @@ var uglifiedString=nodeUglifier.toString();
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getSourceContainer = function (serial) {
-  return this.wrappedSourceContainerName + &#x22;[&#x22; + this.serialMappings[serial] + &#x22;]&#x22;;
+  return this.wrappedSourceContainerName + "[" + this.serialMappings[serial] + "]";
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 }
 
 TotalObfuscator.prototype.getSourceContainer = function(serial) {
-  return this.wrappedSourceContainerName + &#x22;[&#x22; + this.serialMappings[serial] + &#x22;]&#x22;;
+  return this.wrappedSourceContainerName + "[" + this.serialMappings[serial] + "]";
 };
 
 TotalObfuscator.prototype.getRequireSubstitutionForMerge = function(serial) {
-  return this.<span class="apidocCodeKeywordSpan">getSourceContainer</span>(serial) + &#x22;.exports&#x22;;
+  return this.<span class="apidocCodeKeywordSpan">getSourceContainer</span>(serial) + ".exports";
 };
 
 TotalObfuscator.prototype.addWrapper = function(source, serial) {
   var firstLine, lastLine, modulesArrayStr, secondLine;
   modulesArrayStr = this.getSourceContainer(serial);
-  firstLine = modulesArrayStr + &#x22;={exports:{}};&#x22; + &#x22;\n&#x22;;
-  secondLine = &#x22;(function(module,exports) {&#x22;;
+  firstLine = modulesArrayStr + "={exports:{}};" + "\n";
+  secondLine = "(function(module,exports) {";
 ...</pre></li>
     </ul>
 
@@ -1055,7 +1048,7 @@ TotalObfuscator.prototype.addWrapper = function(source, serial) {
   var _this, depGraph, edgeToRemove, error, filteredOutFilesWithExport, firstLine, iter, me, r, recursiveSourceGrabber, wasCycle
 ;
   _this = this;
-  firstLine = &#x22;var &#x22; + this.wrappedSourceContainerName + &#x22;=[];&#x22;;
+  firstLine = "var " + this.wrappedSourceContainerName + "=[];";
   r = {
     source: firstLine,
     filteredOutFilesObj: {},
@@ -1075,8 +1068,8 @@ TotalObfuscator.prototype.addWrapper = function(source, serial) {
       me = error;
     }
     source = packageUtils.readFile(filePath).toString();
-    if (_.isEqual(path.extname(filePath), &#x22;.json&#x22;)) {
-      source = &#x22;module.exports=(&#x22; + source + &#x22;);&#x22;;
+    if (_.isEqual(path.extname(filePath), ".json")) {
+      source = "module.exports=(" + source + ");";
     }
     pathSaltedHash = cryptoUtils.getSaltedHash(filePath, _this.hashAlgorithm, _this.salt);
     if (_this._sourceCodes[pathSaltedHash] == null) {
@@ -1085,15 +1078,15 @@ TotalObfuscator.prototype.addWrapper = function(source, serial) {
         serial: _.keys(_this._sourceCodes).length,
         sourceMod: source
       };
-      console.log(filePath + &#x22; added to sources &#x22;);
+      console.log(filePath + " added to sources ");
     }
     sourceObj = _this._sourceCodes[pathSaltedHash];
     isSourceObjFilteredWithExport = filteredOutFilesWithExport.filter(function(fFile) {
       return path.normalize(fFile) === path.normalize(filePath);
-    }).length &#x3e; 0;
+    }).length &gt; 0;
     isSourceObjFiltered = _this.filteredOutFiles.filter(function(fFile) {
       return path.normalize(fFile) === path.normalize(filePath);
-    }).length &#x3e; 0;
+    }).length &gt; 0;
     ast = packageUtils.getAst(source);
     requireStatements = packageUtils.getRequireStatements(ast, filePath, _this.fileExtensions, _this.options.packNodeModules);
     requireStatements.forEach(function(o, i) {
@@ -1101,7 +1094,7 @@ TotalObfuscator.prototype.addWrapper = function(source, serial) {
         pathSaltedHash: cryptoUtils.getSaltedHash(o.path, _this.hashAlgorithm, _this.salt)
       });
     });
-    for (j = 0, len = requireStatements.length; j &#x3c; len; j++) {
+    for (j = 0, len = requireStatements.length; j &lt; len; j++) {
       requireStatement = requireStatements[j];
       try {
         depGraph.addNewVertex(requireStatement.path, null);
@@ -1114,9 +1107,9 @@ TotalObfuscator.prototype.addWrapper = function(source, serial) {
         me = error2;
       }
       sourceObjDep = _this._sourceCodes[requireStatement.pathSaltedHash];
-      if (isSourceObjFilteredWithExport &#x26;&#x26; packageUtils.getIfNonNativeNotFilteredNonNpm(requireStatement.path, filteredOutFilesWithExport
+      if (isSourceObjFilteredWithExport &amp;&amp; packageUtils.getIfNonNativeNotFilteredNonNpm(requireStatement.path, filteredOutFilesWithExport
 , _this.options.fileExtensions)) {
-        msg = &#x22;filtered files can not have dependency on merged files, file: &#x22; + filePath + &#x22; dependency: &#x22; + requireStatement.path
+        msg = "filtered files can not have dependency on merged files, file: " + filePath + " dependency: " + requireStatement.path
 ;
         if (_this.options.suppressFilteredDependentError) {
           console.warn(msg);
@@ -1129,15 +1122,15 @@ TotalObfuscator.prototype.addWrapper = function(source, serial) {
       }
       sourceObjDep = _this._sourceCodes[requireStatement.pathSaltedHash];
       if (sourceObjDep == null) {
-        throw new Error(&#x22; internal should not happen 1&#x22;);
+        throw new Error(" internal should not happen 1");
       }
       otherSerial = sourceObjDep.serial;
       isSourceObjDepFilteredWithExport = filteredOutFilesWithExport.filter(function(fFile) {
         return path.normalize(fFile) === path.normalize(requireStatement.path);
-      }).length &#x3e; 0;
+      }).length &gt; 0;
       isSourceObjDepFiltered = _this.filteredOutFiles.filter(function(fFile) {
         return path.normalize(fFile) === path.normalize(requireStatement.path);
-      }).length &#x3e; 0;
+      }).length &gt; 0;
       if (isSourceObjDepFilteredWithExport) {
         replacement = _this.getRequireSubstitutionForFilteredWithExport(requireStatement.path, _this.getNewRelativePathForFilteredWithExport
 );
@@ -1145,17 +1138,17 @@ TotalObfuscator.prototype.addWrapper = function(source, serial) {
         replacement = _th ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-**npm install &#x22;node-uglifier&#x22;**
+**npm install "node-uglifier"**
 
 ### merge and uglify
 ```javascript
-var NodeUglifier = require(&#x22;node-uglifier&#x22;);
-var nodeUglifier = new NodeUglifier(&#x22;lib_compiled/test/testproject/main.js&#x22;);
+var NodeUglifier = require("node-uglifier");
+var nodeUglifier = new NodeUglifier("lib_compiled/test/testproject/main.js");
 nodeUglifier.<span class="apidocCodeKeywordSpan">merge</span>().uglify();
 
 //exporting
-nodeUglifier.exportToFile(&#x22;lib_compiled/test/resultFiles/simpleMergeAndUglify.js&#x22;);
-nodeUglifier.exportSourceMaps(&#x22;lib_compiled/test/resultFiles/sourcemaps/simpleMergeAndUglify.js&#x22;);
+nodeUglifier.exportToFile("lib_compiled/test/resultFiles/simpleMergeAndUglify.js");
+nodeUglifier.exportSourceMaps("lib_compiled/test/resultFiles/sourcemaps/simpleMergeAndUglify.js");
 //DONE
 
 //in case you need it get the string
@@ -1176,8 +1169,8 @@ nodeUglifier.exportSourceMaps(&#x22;lib_compiled/test/resultFiles/sourcemaps/sim
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 //exporting
-nodeUglifier.exportToFile(&#x22;lib_compiled/test/resultFiles/simpleMergeAndUglify.js&#x22;);
-nodeUglifier.exportSourceMaps(&#x22;lib_compiled/test/resultFiles/sourcemaps/simpleMergeAndUglify.js&#x22;);
+nodeUglifier.exportToFile("lib_compiled/test/resultFiles/simpleMergeAndUglify.js");
+nodeUglifier.exportSourceMaps("lib_compiled/test/resultFiles/sourcemaps/simpleMergeAndUglify.js");
 //DONE
 
 //in case you need it get the string
@@ -1188,8 +1181,8 @@ var uglifiedString=nodeUglifier.<span class="apidocCodeKeywordSpan">toString</sp
 
 ### one liner
 ```javascript
-new NodeUglifier(&#x22;lib_compiled/test/testproject/main.js&#x22;).uglify().exportToFile(&#x22;lib_compiled/test/resultFiles/simpleMergeAndUglify
-.js&#x22;);
+new NodeUglifier("lib_compiled/test/testproject/main.js").uglify().exportToFile("lib_compiled/test/resultFiles/simpleMergeAndUglify
+.js");
 ```
 ...</pre></li>
     </ul>
@@ -1246,17 +1239,17 @@ new NodeUglifier(&#x22;lib_compiled/test/testproject/main.js&#x22;).uglify().exp
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-**npm install &#x22;node-uglifier&#x22;**
+**npm install "node-uglifier"**
 
 ### merge and uglify
 ```javascript
-var NodeUglifier = require(&#x22;node-uglifier&#x22;);
-var nodeUglifier = new NodeUglifier(&#x22;lib_compiled/test/testproject/main.js&#x22;);
+var NodeUglifier = require("node-uglifier");
+var nodeUglifier = new NodeUglifier("lib_compiled/test/testproject/main.js");
 nodeUglifier.merge().<span class="apidocCodeKeywordSpan">uglify</span>();
 
 //exporting
-nodeUglifier.exportToFile(&#x22;lib_compiled/test/resultFiles/simpleMergeAndUglify.js&#x22;);
-nodeUglifier.exportSourceMaps(&#x22;lib_compiled/test/resultFiles/sourcemaps/simpleMergeAndUglify.js&#x22;);
+nodeUglifier.exportToFile("lib_compiled/test/resultFiles/simpleMergeAndUglify.js");
+nodeUglifier.exportSourceMaps("lib_compiled/test/resultFiles/sourcemaps/simpleMergeAndUglify.js");
 //DONE
 
 //in case you need it get the string
@@ -1278,22 +1271,22 @@ nodeUglifier.exportSourceMaps(&#x22;lib_compiled/test/resultFiles/sourcemaps/sim
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">generateSalt = function (saltLength) {
-  return crypto.randomBytes(Math.ceil(saltLength / 2)).toString(&#x27;hex&#x27;).substring(0, saltLength);
+  return crypto.randomBytes(Math.ceil(saltLength / 2)).toString('hex').substring(0, saltLength);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 _.extend(this.options, options);
 this.mainFileAbs = path.resolve(mainFile);
 if (!fs.existsSync(this.mainFileAbs)) {
-  throw new Error(&#x22;main file not found&#x22;);
+  throw new Error("main file not found");
 } else {
-  console.log(&#x22;processing main file: &#x22; + this.mainFileAbs);
+  console.log("processing main file: " + this.mainFileAbs);
 }
 this.salt = cryptoUtils.<span class="apidocCodeKeywordSpan">generateSalt</span>(saltLength);
-this.hashAlgorithm = &#x22;sha1&#x22;;
-this.wrappedSourceContainerName = &#x22;cachedModules&#x22;;
+this.hashAlgorithm = "sha1";
+this.wrappedSourceContainerName = "cachedModules";
 this.serialMappings = cryptoUtils.shuffleArray((function() {
   _results = [];
-  for (_i = 0; _i &#x3c;= 10000; _i++){ _results.push(_i); }
+  for (_i = 0; _i &lt;= 10000; _i++){ _results.push(_i); }
   return _results;
 }).apply(this));
 ...</pre></li>
@@ -1309,12 +1302,12 @@ this.serialMappings = cryptoUtils.shuffleArray((function() {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getSaltedHash = function (message, hashAlgorithm, salt) {
-  return crypto.createHmac(hashAlgorithm, salt).update(message).digest(&#x27;hex&#x27;);
+  return crypto.createHmac(hashAlgorithm, salt).update(message).digest('hex');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 var firstLine, r, recursiveSourceGrabber, _this;
 _this = this;
-firstLine = &#x22;var &#x22; + this.wrappedSourceContainerName + &#x22;=[];&#x22;;
+firstLine = "var " + this.wrappedSourceContainerName + "=[];";
 r = firstLine;
 recursiveSourceGrabber = function(filePath) {
   var ast, isReplaced, otherSerial, pathSaltedHash, requireStatement, requireStatements, serial, source, sourceMod, withTheOtherQuotation
@@ -1327,7 +1320,7 @@ recursiveSourceGrabber = function(filePath) {
       source: source,
       serial: _.keys(_this._sourceCodes).length
     };
-    console.log(filePath + &#x22; added to sources &#x22;);
+    console.log(filePath + " added to sources ");
   }
 ...</pre></li>
     </ul>
@@ -1350,7 +1343,7 @@ recursiveSourceGrabber = function(filePath) {
   if (seed) {
     randFnc = seedrandom(seed);
   }
-  for (i = k = ref = array.length - 1; ref &#x3c;= 0 ? k &#x3c;= 0 : k &#x3e;= 0; i = ref &#x3c;= 0 ? ++k : --k) {
+  for (i = k = ref = array.length - 1; ref &lt;= 0 ? k &lt;= 0 : k &gt;= 0; i = ref &lt;= 0 ? ++k : --k) {
     j = Math.floor(randFnc() * (i + 1));
     temp = array[i];
     array[i] = array[j];
@@ -1359,16 +1352,16 @@ recursiveSourceGrabber = function(filePath) {
   return array;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    throw new Error(&#x22;main file not found&#x22;);
+    throw new Error("main file not found");
   } else {
-    console.log(&#x22;processing main file: &#x22; + this.mainFileAbs);
+    console.log("processing main file: " + this.mainFileAbs);
   }
   this.salt = cryptoUtils.generateSalt(saltLength);
-  this.hashAlgorithm = &#x22;sha1&#x22;;
-  this.wrappedSourceContainerName = &#x22;cachedModules&#x22;;
+  this.hashAlgorithm = "sha1";
+  this.wrappedSourceContainerName = "cachedModules";
   this.serialMappings = cryptoUtils.<span class="apidocCodeKeywordSpan">shuffleArray</span>((function() {
     _results = [];
-    for (_i = 0; _i &#x3c;= 10000; _i++){ _results.push(_i); }
+    for (_i = 0; _i &lt;= 10000; _i++){ _results.push(_i); }
     return _results;
   }).apply(this));
   this._sourceCodes = {};
@@ -1392,22 +1385,22 @@ recursiveSourceGrabber = function(filePath) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">generateSalt = function (saltLength) {
-  return crypto.randomBytes(Math.ceil(saltLength / 2)).toString(&#x27;hex&#x27;).substring(0, saltLength);
+  return crypto.randomBytes(Math.ceil(saltLength / 2)).toString('hex').substring(0, saltLength);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 _.extend(this.options, options);
 this.mainFileAbs = path.resolve(mainFile);
 if (!fs.existsSync(this.mainFileAbs)) {
-  throw new Error(&#x22;main file not found&#x22;);
+  throw new Error("main file not found");
 } else {
-  console.log(&#x22;processing main file: &#x22; + this.mainFileAbs);
+  console.log("processing main file: " + this.mainFileAbs);
 }
 this.salt = cryptoUtils.<span class="apidocCodeKeywordSpan">generateSalt</span>(saltLength);
-this.hashAlgorithm = &#x22;sha1&#x22;;
-this.wrappedSourceContainerName = &#x22;cachedModules&#x22;;
+this.hashAlgorithm = "sha1";
+this.wrappedSourceContainerName = "cachedModules";
 this.serialMappings = cryptoUtils.shuffleArray((function() {
   _results = [];
-  for (_i = 0; _i &#x3c;= 10000; _i++){ _results.push(_i); }
+  for (_i = 0; _i &lt;= 10000; _i++){ _results.push(_i); }
   return _results;
 }).apply(this));
 ...</pre></li>
@@ -1423,12 +1416,12 @@ this.serialMappings = cryptoUtils.shuffleArray((function() {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getSaltedHash = function (message, hashAlgorithm, salt) {
-  return crypto.createHmac(hashAlgorithm, salt).update(message).digest(&#x27;hex&#x27;);
+  return crypto.createHmac(hashAlgorithm, salt).update(message).digest('hex');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 var firstLine, r, recursiveSourceGrabber, _this;
 _this = this;
-firstLine = &#x22;var &#x22; + this.wrappedSourceContainerName + &#x22;=[];&#x22;;
+firstLine = "var " + this.wrappedSourceContainerName + "=[];";
 r = firstLine;
 recursiveSourceGrabber = function(filePath) {
   var ast, isReplaced, otherSerial, pathSaltedHash, requireStatement, requireStatements, serial, source, sourceMod, withTheOtherQuotation
@@ -1441,7 +1434,7 @@ recursiveSourceGrabber = function(filePath) {
       source: source,
       serial: _.keys(_this._sourceCodes).length
     };
-    console.log(filePath + &#x22; added to sources &#x22;);
+    console.log(filePath + " added to sources ");
   }
 ...</pre></li>
     </ul>
@@ -1457,7 +1450,7 @@ recursiveSourceGrabber = function(filePath) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">shuffleArray = function (array) {
   var i, j, temp, _i, _ref;
-  for (i = _i = _ref = array.length - 1; _ref &#x3c;= 0 ? _i &#x3c;= 0 : _i &#x3e;= 0; i = _ref &#x3c;= 0 ? ++_i : --_i) {
+  for (i = _i = _ref = array.length - 1; _ref &lt;= 0 ? _i &lt;= 0 : _i &gt;= 0; i = _ref &lt;= 0 ? ++_i : --_i) {
     j = Math.floor(Math.random() * (i + 1));
     temp = array[i];
     array[i] = array[j];
@@ -1466,16 +1459,16 @@ recursiveSourceGrabber = function(filePath) {
   return array;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    throw new Error(&#x22;main file not found&#x22;);
+    throw new Error("main file not found");
   } else {
-    console.log(&#x22;processing main file: &#x22; + this.mainFileAbs);
+    console.log("processing main file: " + this.mainFileAbs);
   }
   this.salt = cryptoUtils.generateSalt(saltLength);
-  this.hashAlgorithm = &#x22;sha1&#x22;;
-  this.wrappedSourceContainerName = &#x22;cachedModules&#x22;;
+  this.hashAlgorithm = "sha1";
+  this.wrappedSourceContainerName = "cachedModules";
   this.serialMappings = cryptoUtils.<span class="apidocCodeKeywordSpan">shuffleArray</span>((function() {
     _results = [];
-    for (_i = 0; _i &#x3c;= 10000; _i++){ _results.push(_i); }
+    for (_i = 0; _i &lt;= 10000; _i++){ _results.push(_i); }
     return _results;
   }).apply(this));
   this._sourceCodes = {};
@@ -1501,12 +1494,12 @@ recursiveSourceGrabber = function(filePath) {
     <li>description and source-code<pre class="apidocCodePre">function IPv4(octets) {
   var j, len, octet;
   if (octets.length !== 4) {
-    throw new Error(&#x22;ipaddr: ipv4 octet count should be 4&#x22;);
+    throw new Error("ipaddr: ipv4 octet count should be 4");
   }
-  for (j = 0, len = octets.length; j &#x3c; len; j++) {
+  for (j = 0, len = octets.length; j &lt; len; j++) {
     octet = octets[j];
-    if (!((0 &#x3c;= octet &#x26;&#x26; octet &#x3c;= 255))) {
-      throw new Error(&#x22;ipaddr: ipv4 octet should fit in 8 bits&#x22;);
+    if (!((0 &lt;= octet &amp;&amp; octet &lt;= 255))) {
+      throw new Error("ipaddr: ipv4 octet should fit in 8 bits");
     }
   }
   this.octets = octets;
@@ -1516,18 +1509,18 @@ recursiveSourceGrabber = function(filePath) {
   IPv6.prototype.toIPv4Address = function() {
     var high, low, ref;
     if (!this.isIPv4MappedAddress()) {
-      throw new Error(&#x22;ipaddr: trying to convert a generic ipv6 address to ipv4&#x22;);
+      throw new Error("ipaddr: trying to convert a generic ipv6 address to ipv4");
     }
     ref = this.parts.slice(-2), high = ref[0], low = ref[1];
-    return new ipaddr.<span class="apidocCodeKeywordSpan">IPv4</span>([high &#x3e;&#x3e; 8, high &#x26; 0xff, low &#x3e;&#x3e; 8
-, low &#x26; 0xff]);
+    return new ipaddr.<span class="apidocCodeKeywordSpan">IPv4</span>([high &gt;&gt; 8, high &amp; 0xff, low &gt;&gt; 8
+, low &amp; 0xff]);
   };
 
   return IPv6;
 
 })();
 
-ipv6Part = &#x22;(?:[0-9a-f]+::?)+&#x22;;
+ipv6Part = "(?:[0-9a-f]+::?)+";
 ...</pre></li>
     </ul>
 
@@ -1544,19 +1537,19 @@ ipv6Part = &#x22;(?:[0-9a-f]+::?)+&#x22;;
   var i, j, k, len, part, ref;
   if (parts.length === 16) {
     this.parts = [];
-    for (i = j = 0; j &#x3c;= 14; i = j += 2) {
-      this.parts.push((parts[i] &#x3c;&#x3c; 8) | parts[i + 1]);
+    for (i = j = 0; j &lt;= 14; i = j += 2) {
+      this.parts.push((parts[i] &lt;&lt; 8) | parts[i + 1]);
     }
   } else if (parts.length === 8) {
     this.parts = parts;
   } else {
-    throw new Error(&#x22;ipaddr: ipv6 part count should be 8 or 16&#x22;);
+    throw new Error("ipaddr: ipv6 part count should be 8 or 16");
   }
   ref = this.parts;
-  for (k = 0, len = ref.length; k &#x3c; len; k++) {
+  for (k = 0, len = ref.length; k &lt; len; k++) {
     part = ref[k];
-    if (!((0 &#x3c;= part &#x26;&#x26; part &#x3c;= 0xffff))) {
-      throw new Error(&#x22;ipaddr: ipv6 part should fit in 16 bits&#x22;);
+    if (!((0 &lt;= part &amp;&amp; part &lt;= 0xffff))) {
+      throw new Error("ipaddr: ipv6 part should fit in 16 bits");
     }
   }
 }</pre></li>
@@ -1570,7 +1563,7 @@ ipaddr.fromByteArray = function(bytes) {
   } else if (length === 16) {
     return new ipaddr.<span class="apidocCodeKeywordSpan">IPv6</span>(bytes);
   } else {
-    throw new Error(&#x22;ipaddr: the binary input is neither an IPv6 nor IPv4 address&#x22;);
+    throw new Error("ipaddr: the binary input is neither an IPv6 nor IPv4 address");
   }
 };
 
@@ -1596,7 +1589,7 @@ ipaddr.process = function(string) {
   } else if (length === 16) {
     return new ipaddr.IPv6(bytes);
   } else {
-    throw new Error(&#x22;ipaddr: the binary input is neither an IPv6 nor IPv4 address&#x22;);
+    throw new Error("ipaddr: the binary input is neither an IPv6 nor IPv4 address");
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -1622,7 +1615,7 @@ ipaddr.process = function(string) {
 };
 
 ipaddr.IPv4.isValidFourPartDecimal = function(string) {
-  if (ipaddr.IPv4.<span class="apidocCodeKeywordSpan">isValid</span>(string) &#x26;&#x26; string.match(/^\d+(\.\d+){3}$/)) {
+  if (ipaddr.IPv4.<span class="apidocCodeKeywordSpan">isValid</span>(string) &amp;&amp; string.match(/^\d+(\.\d+){3}$/)) {
     return true;
   } else {
     return false;
@@ -1648,7 +1641,7 @@ ipaddr.IPv6.isValid = function(string) {
   } else if (ipaddr.IPv4.isValid(string)) {
     return ipaddr.IPv4.parse(string);
   } else {
-    throw new Error(&#x22;ipaddr: the address has neither IPv6 nor IPv4 format&#x22;);
+    throw new Error("ipaddr: the address has neither IPv6 nor IPv4 format");
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -1659,7 +1652,7 @@ IPv4.prototype.range = function() {
 };
 
 IPv4.prototype.toIPv4MappedAddress = function() {
-  return ipaddr.IPv6.<span class="apidocCodeKeywordSpan">parse</span>(&#x22;::ffff:&#x22; + (this.toString()));
+  return ipaddr.IPv6.<span class="apidocCodeKeywordSpan">parse</span>("::ffff:" + (this.toString()));
 };
 
 IPv4.prototype.prefixLengthFromSubnetMask = function() {
@@ -1689,12 +1682,12 @@ IPv4.prototype.prefixLengthFromSubnetMask = function() {
       return ipaddr.IPv4.parseCIDR(string);
     } catch (error1) {
       e = error1;
-      throw new Error(&#x22;ipaddr: the address has neither IPv6 nor IPv4 CIDR format&#x22;);
+      throw new Error("ipaddr: the address has neither IPv6 nor IPv4 CIDR format");
     }
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    throw new Error(&#x22;ipaddr: the address has neither IPv6 nor IPv4 format&#x22;);
+    throw new Error("ipaddr: the address has neither IPv6 nor IPv4 format");
   }
 };
 
@@ -1708,7 +1701,7 @@ ipaddr.parseCIDR = function(string) {
       return ipaddr.IPv4.parseCIDR(string);
     } catch (error1) {
       e = error1;
-      throw new Error(&#x22;ipaddr: the address has neither IPv6 nor IPv4 CIDR format&#x22;);
+      throw new Error("ipaddr: the address has neither IPv6 nor IPv4 CIDR format");
 ...</pre></li>
     </ul>
 
@@ -1724,7 +1717,7 @@ ipaddr.parseCIDR = function(string) {
     <li>description and source-code<pre class="apidocCodePre">process = function (string) {
   var addr;
   addr = this.parse(string);
-  if (addr.kind() === &#x27;ipv6&#x27; &#x26;&#x26; addr.isIPv4MappedAddress()) {
+  if (addr.kind() === 'ipv6' &amp;&amp; addr.isIPv4MappedAddress()) {
     return addr.toIPv4Address();
   } else {
     return addr;
@@ -1745,14 +1738,14 @@ ipaddr.parseCIDR = function(string) {
     <li>description and source-code<pre class="apidocCodePre">subnetMatch = function (address, rangeList, defaultName) {
   var j, len, rangeName, rangeSubnets, subnet;
   if (defaultName == null) {
-    defaultName = &#x27;unicast&#x27;;
+    defaultName = 'unicast';
   }
   for (rangeName in rangeList) {
     rangeSubnets = rangeList[rangeName];
-    if (rangeSubnets[0] &#x26;&#x26; !(rangeSubnets[0] instanceof Array)) {
+    if (rangeSubnets[0] &amp;&amp; !(rangeSubnets[0] instanceof Array)) {
       rangeSubnets = [rangeSubnets];
     }
-    for (j = 0, len = rangeSubnets.length; j &#x3c; len; j++) {
+    for (j = 0, len = rangeSubnets.length; j &lt; len; j++) {
       subnet = rangeSubnets[j];
       if (address.match.apply(address, subnet)) {
         return rangeName;
@@ -1764,7 +1757,7 @@ ipaddr.parseCIDR = function(string) {
     <li>example usage<pre class="apidocCodePre">...
   loopback: [[new IPv4([127, 0, 0, 0]), 8]],
   carrierGradeNat: [[new IPv4([100, 64, 0, 0]), 10]],
-  &#x22;private&#x22;: [[new IPv4([10, 0, 0, 0]), 8], [new IPv4([172, 16, 0, 0]), 12], [new IPv4([192, 168, 0, 0]), 16]],
+  "private": [[new IPv4([10, 0, 0, 0]), 8], [new IPv4([172, 16, 0, 0]), 12], [new IPv4([192, 168, 0, 0]), 16]],
   reserved: [[new IPv4([192, 0, 0, 0]), 24], [new IPv4([192, 0, 2, 0]), 24], [new IPv4([192, 88, 99, 0]), 24], [new IPv4([198, 51
 , 100, 0]), 24], [new IPv4([203, 0, 113, 0]), 24], [new IPv4([240, 0, 0, 0]), 4]]
 };
@@ -1774,7 +1767,7 @@ IPv4.prototype.range = function() {
 };
 
 IPv4.prototype.toIPv4MappedAddress = function() {
-  return ipaddr.IPv6.parse(&#x22;::ffff:&#x22; + (this.toString()));
+  return ipaddr.IPv6.parse("::ffff:" + (this.toString()));
 };
 
 IPv4.prototype.prefixLengthFromSubnetMask = function() {
@@ -1798,7 +1791,7 @@ IPv4.prototype.prefixLengthFromSubnetMask = function() {
     <li>description and source-code<pre class="apidocCodePre">countWords = function (sentence) {
   var index, words;
   index = {};
-  words = sentence.replace(/[.,?!;()&#x22;&#x27;-]/g, &#x22; &#x22;).replace(/\s+/g, &#x22; &#x22;).toLowerCase().split(&#x22; &#x22;);
+  words = sentence.replace(/[.,?!;()"'-]/g, " ").replace(/\s+/g, " ").toLowerCase().split(" ");
   words.forEach(function(word) {
     if (!(index.hasOwnProperty(word))) {
       index[word] = 0;
@@ -1842,7 +1835,7 @@ IPv4.prototype.prefixLengthFromSubnetMask = function() {
     source: source,
     serial: _.keys(_this._sourceCodes).length
   };
-  console.log(filePath + &#x22; added to sources &#x22;);
+  console.log(filePath + " added to sources ");
 }
 serial = _this._sourceCodes[pathSaltedHash].serial;
 ast = packageUtils.<span class="apidocCodeKeywordSpan">getAst</span>(source);
@@ -1868,23 +1861,23 @@ sourceMod = source;
     <li>description and source-code<pre class="apidocCodePre">getIfNonNativeNotFilteredNonNpm = function (fileAbs, filters, possibleExtensions) {
   var existingExtensions, r;
   r = null;
-  if (path.extname(fileAbs) === &#x22;&#x22;) {
+  if (path.extname(fileAbs) === "") {
     existingExtensions = possibleExtensions.filter(function(ext) {
-      return fs.existsSync(fileAbs + &#x22;.&#x22; + ext);
+      return fs.existsSync(fileAbs + "." + ext);
     });
-    if (existingExtensions.length &#x3e; 1) {
-      throw new Error(&#x22; multiple matching extensions problem for &#x22; + fileAbs);
+    if (existingExtensions.length &gt; 1) {
+      throw new Error(" multiple matching extensions problem for " + fileAbs);
     }
-    r = existingExtensions.length === 1 ? fileAbs + &#x22;.&#x22; + existingExtensions[0] : null;
+    r = existingExtensions.length === 1 ? fileAbs + "." + existingExtensions[0] : null;
   } else {
     r = fs.existsSync(fileAbs) ? fileAbs : null;
   }
   if (r) {
     if (filters.filter(function(fFile) {
       return path.normalize(fFile) === path.normalize(r);
-    }).length &#x3e; 0) {
+    }).length &gt; 0) {
       r = null;
-      console.log(fileAbs + &#x22; was filtered &#x22;);
+      console.log(fileAbs + " was filtered ");
     }
   }
   return r;
@@ -1894,8 +1887,8 @@ sourceMod = source;
 } catch (error) {
   me = error;
 }
-if (pathOfModuleLocStats &#x26;&#x26; pathOfModuleLocStats.isDirectory()) {
-  pathOfModuleLoc = path.resolve(pathOfModuleLoc, &#x22;index&#x22;);
+if (pathOfModuleLocStats &amp;&amp; pathOfModuleLocStats.isDirectory()) {
+  pathOfModuleLoc = path.resolve(pathOfModuleLoc, "index");
 }
 pathOfModule = packageUtils.<span class="apidocCodeKeywordSpan">getIfNonNativeNotFilteredNonNpm</span>(pathOfModuleLoc, [], possibleExtensions
 );
@@ -1922,7 +1915,7 @@ if (pathOfModule) {
   var destination, dirOrFile, error, fileName, filestats, j, len, me, r, rootDir;
   r = [];
   rootDir = fs.lstatSync(rootPath).isDirectory() ? path.resolve(rootPath) : path.dirname(path.resolve(rootPath));
-  for (j = 0, len = dirAndFileArray.length; j &#x3c; len; j++) {
+  for (j = 0, len = dirAndFileArray.length; j &lt; len; j++) {
     dirOrFile = dirAndFileArray[j];
     destination = path.resolve(rootDir, dirOrFile);
     try {
@@ -1931,13 +1924,13 @@ if (pathOfModule) {
       me = error;
       filestats = null;
     }
-    if (filestats &#x26;&#x26; filestats.isDirectory()) {
+    if (filestats &amp;&amp; filestats.isDirectory()) {
       fs.readdirSync(destination).reduce((function(prev, curr) {
         prev.push(path.join(destination, curr));
         return prev;
       }), r);
     } else {
-      if (path.extname(destination) === &#x22;&#x22;) {
+      if (path.extname(destination) === "") {
         fileName = path.basename(destination);
         fs.readdirSync(path.dirname(destination)).filter(function(fileNameLoc) {
           return fileNameLoc.indexOf(fileName) !== -1;
@@ -1967,7 +1960,7 @@ if (pathOfModule) {
     <li>description and source-code<pre class="apidocCodePre">getRequireStatements = function (ast, file, possibleExtensions, packNodeModules) {
   var fileDir, handleRequireNode, r;
   if (possibleExtensions == null) {
-    possibleExtensions = [&#x22;js&#x22;, &#x22;coffee&#x22;];
+    possibleExtensions = ["js", "coffee"];
   }
   if (packNodeModules == null) {
     packNodeModules = false;
@@ -1978,9 +1971,9 @@ if (pathOfModule) {
     var error, hasPathInIt, me, pathOfModule, pathOfModuleLoc, pathOfModuleLocStats, pathOfModuleRaw, rs;
     pathOfModuleRaw = args[0].value;
     if (pathOfModuleRaw == null) {
-      throw new Error(&#x22;probably dynamic&#x22;);
+      throw new Error("probably dynamic");
     }
-    hasPathInIt = !_.isEmpty(pathOfModuleRaw.match(&#x22;/&#x22;)) || !_.isEmpty(pathOfModuleRaw.match(/\\/));
+    hasPathInIt = !_.isEmpty(pathOfModuleRaw.match("/")) || !_.isEmpty(pathOfModuleRaw.match(/\\/));
     if (hasPathInIt) {
 
     } else if (packNodeModules) {
@@ -1994,8 +1987,8 @@ if (pathOfModule) {
     } catch (error) {
       me = error;
     }
-    if (pathOfModuleLocStats &#x26;&#x26; pathOfModuleLocStats.isDirectory()) {
-      pathOfModuleLoc = path.resolve(pathOfModuleLoc, &#x22;index&#x22;);
+    if (pathOfModuleLocStats &amp;&amp; pathOfModuleLocStats.isDirectory()) {
+      pathOfModuleLoc = path.resolve(pathOfModuleLoc, "index");
     }
     pathOfModule = packageUtils.getIfNonNativeNotFilteredNonNpm(pathOfModuleLoc, [], possibleExtensions);
     rs = {
@@ -2008,8 +2001,8 @@ if (pathOfModule) {
   };
   ast.walk(new UglifyJS.TreeWalker(function(node) {
     var args, error, me, ref, requireArgs, text, text2, walkedArgs;
-    if ((node instanceof UglifyJS.AST_Call) &#x26;&#x26; (node.start.value === &#x27;require&#x27; || (node.start.value === &#x27;new&#x27; &#x26;&#x26; node.expression
-.print_to_string() === &#x22;require&#x22;))) {
+    if ((node instanceof UglifyJS.AST_Call) &amp;&amp; (node.start.value === 'require' || (node.start.value === 'new' &amp;&amp; node.expression
+.print_to_string() === "require"))) {
       text = node.print_to_string({
         beautify: false
       });
@@ -2019,23 +2012,23 @@ if (pathOfModule) {
         requireArgs = node.args;
       }
       try {
-        if (requireArgs.length !== 1 || !handleRequireNode(text, requireArgs) &#x26;&#x26; !_.isEmpty(walkedArgs)) {
-          text2 = &#x22;require(&#x27;&#x22; + walkedArgs[0].value + &#x22;&#x27;)&#x22;;
+        if (requireArgs.length !== 1 || !handleRequireNode(text, requireArgs) &amp;&amp; !_.isEmpty(walkedArgs)) {
+          text2 = "require('" + walkedArgs[0].value + "')";
           handleRequireNode(text2, walkedArgs);
         }
       } catch (error) {
         me = error;
-        console.log(&#x22;Warning!:&#x22;);
-        console.log(&#x22;unhandled require type in file: &#x22; + file + &#x22; the problematic statement: &#x22; + text + &#x22; probably something fancy
- going on! &#x22; + &#x22; the error: &#x22; + me.message);
+        console.log("Warning!:");
+        console.log("unhandled require type in file: " + file + " the problematic statement: " + text + " probably something fancy
+ going on! " + " the error: " + me.message);
       }
       return true;
-    } else if ((node instanceof UglifyJS.AST_Call) &#x26;&#x26; (node.start.value === &#x27;new&#x27; &#x26;&#x26; node.expression.start.value === &#x22;(&#x22; &#x26;&#x26; node
-.expression.print_to_string().indexOf(&#x22;require&#x22;) !== -1)) {
+    } else if ((node instanceof UglifyJS.AST_Call) &amp;&amp; (node.start.value === 'new' &amp;&amp; node.expression.start.value === "(" &amp;&amp; node
+.expression.print_to_string().indexOf("require") !== -1)) {
       args = node.expression.args;
-      text = &#x22;require&#x22; + &#x22;(&#x27;&#x22; + args[0].value + &#x22;&#x27;)&#x22;;
+      text = "require" + "('" + args[0].value + "')";
       handleRequireNode(text, args);
-      console.log(&#x22;second &#x22; + text);
+      console.log("second " + text);
       return true;
     } else {
 
@@ -2047,7 +2040,7 @@ if (pathOfModule) {
     source: source,
     serial: _.keys(_this._sourceCodes).length
   };
-  console.log(filePath + &#x22; added to sources &#x22;);
+  console.log(filePath + " added to sources ");
 }
 serial = _this._sourceCodes[pathSaltedHash].serial;
 ast = packageUtils.getAst(source);
@@ -2058,7 +2051,7 @@ requireStatements.each(function(o, i) {
   });
 });
 sourceMod = source;
-for (_i = 0, _len = requireStatements.length; _i &#x3c; _len; _i++) {
+for (_i = 0, _len = requireStatements.length; _i &lt; _len; _i++) {
 ...</pre></li>
     </ul>
 
@@ -2088,7 +2081,7 @@ for (_i = 0, _len = requireStatements.length; _i &#x3c; _len; _i++) {
   transformer = new UglifyJS.TreeTransformer(null, hexify);
   stream = new UglifyJS.OutputStream;
   stream.print_string = function(str) {
-    return this.print(&#x27;&#x22;&#x27; + str + &#x27;&#x22;&#x27;);
+    return this.print('"' + str + '"');
   };
   ast = ast.transform(transformer);
   ast.print(stream);
@@ -2108,18 +2101,18 @@ for (_i = 0, _len = requireStatements.length; _i &#x3c; _len; _i++) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">hexifyString = function (str) {
   var char, i, j, r, ref;
-  r = &#x22;&#x22;;
-  if (!str.length &#x3e; 0) {
+  r = "";
+  if (!str.length &gt; 0) {
     return r;
   }
-  for (i = j = 0, ref = str.length - 1; 0 &#x3c;= ref ? j &#x3c;= ref : j &#x3e;= ref; i = 0 &#x3c;= ref ? ++j : --j) {
+  for (i = j = 0, ref = str.length - 1; 0 &lt;= ref ? j &lt;= ref : j &gt;= ref; i = 0 &lt;= ref ? ++j : --j) {
     char = str[i];
     if (strEscapeMap[char]) {
       r += r[char];
-    } else if (&#x27;\\&#x27; === char) {
-      r += &#x27;\\&#x27; + str[++i];
+    } else if ('\\' === char) {
+      r += '\\' + str[++i];
     } else {
-      r += &#x27;\\x&#x27; + str.charCodeAt(i).toString(16);
+      r += '\\x' + str.charCodeAt(i).toString(16);
     }
   }
   return r;
@@ -2176,7 +2169,7 @@ hexify = function(node) {
     <li>description and source-code<pre class="apidocCodePre">readFile = function (pathAbs, encoding) {
   var options;
   if (encoding == null) {
-    encoding = &#x27;utf8&#x27;;
+    encoding = 'utf8';
   }
   options = {
     encoding: encoding
@@ -2187,7 +2180,7 @@ hexify = function(node) {
     TotalObfuscator.prototype.combine = function() {
 var firstLine, r, recursiveSourceGrabber, _this;
 _this = this;
-firstLine = &#x22;var &#x22; + this.wrappedSourceContainerName + &#x22;=[];&#x22;;
+firstLine = "var " + this.wrappedSourceContainerName + "=[];";
 r = firstLine;
 recursiveSourceGrabber = function(filePath) {
   var ast, isReplaced, otherSerial, pathSaltedHash, requireStatement, requireStatements, serial, source, sourceMod, withTheOtherQuotation
@@ -2199,7 +2192,7 @@ recursiveSourceGrabber = function(filePath) {
       source: source,
       serial: _.keys(_this._sourceCodes).length
     };
-    console.log(filePath + &#x22; added to sources &#x22;);
+    console.log(filePath + " added to sources ");
 ...</pre></li>
     </ul>
 
@@ -2222,10 +2215,10 @@ recursiveSourceGrabber = function(filePath) {
   });
   if (!isReplaced) {
     withTheOtherQuotation = orig;
-    if (withTheOtherQuotation.indexOf(&#x22;&#x27;&#x22;) !== -1) {
-      withTheOtherQuotation = withTheOtherQuotation.replace(/[&#x27;]/ig, &#x27;&#x22;&#x27;);
+    if (withTheOtherQuotation.indexOf("'") !== -1) {
+      withTheOtherQuotation = withTheOtherQuotation.replace(/[']/ig, '"');
     } else {
-      withTheOtherQuotation = withTheOtherQuotation.replace(/[&#x22;]/ig, &#x22;&#x27;&#x22;);
+      withTheOtherQuotation = withTheOtherQuotation.replace(/["]/ig, "'");
     }
     text = text.replace(withTheOtherQuotation, function(token) {
       isReplaced = true;
@@ -2233,7 +2226,7 @@ recursiveSourceGrabber = function(filePath) {
     });
   }
   if (!isReplaced) {
-    throw new Error(orig + &#x22; was not replaced with &#x22; + replacement);
+    throw new Error(orig + " was not replaced with " + replacement);
   }
   return text;
 }</pre></li>
@@ -2250,10 +2243,10 @@ recursiveSourceGrabber = function(filePath) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">walkExpressions = function (astNode, parentNode, depth) {
-  if (depth &#x3e; 5) {
+  if (depth &gt; 5) {
     return null;
   }
-  if (astNode.name === &#x22;require&#x22;) {
+  if (astNode.name === "require") {
     return (parentNode != null ? parentNode.args : void 0) || astNode.args;
   } else if (astNode.expression != null) {
     return packageUtils.walkExpressions(astNode.expression, astNode, depth + 1);
@@ -2261,10 +2254,10 @@ recursiveSourceGrabber = function(filePath) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 packageUtils.walkExpressions = function(astNode, parentNode, depth) {
-  if (depth &#x3e; 5) {
+  if (depth &gt; 5) {
     return null;
   }
-  if (astNode.name === &#x22;require&#x22;) {
+  if (astNode.name === "require") {
     return (parentNode != null ? parentNode.args : void 0) || astNode.args;
   } else if (astNode.expression != null) {
     return packageUtils.<span class="apidocCodeKeywordSpan">walkExpressions</span>(astNode.expression, astNode, depth + 1);
@@ -2274,7 +2267,7 @@ packageUtils.walkExpressions = function(astNode, parentNode, depth) {
 packageUtils.getRequireStatements = function(ast, file, possibleExtensions, packNodeModules) {
   var fileDir, handleRequireNode, r;
   if (possibleExtensions == null) {
-    possibleExtensions = [&#x22;js&#x22;, &#x22;coffee&#x22;];
+    possibleExtensions = ["js", "coffee"];
 ...</pre></li>
     </ul>
 
@@ -2287,3 +2280,4 @@ packageUtils.getRequireStatements = function(ast, file, possibleExtensions, pack
     ]
 </div>
 </div>
+</body></html>
